@@ -16,20 +16,22 @@
   <meta name="author" content="Elion Luo">
   <meta name="keywords" content="">
   
-    <meta name="description" content="一.线性回归与商品经济二.微积分与商品价值边际三.最值与商品价格">
+    <meta name="description" content="一.线性回归与商品经济预测线性回归：  线性回归是在金融数据分析中很基础的机器学习算法，本文将通俗易懂的介绍线性回归的基本概念，优缺点和逻辑回归的比较。 几个重要的概念：两种数据类型：​	1.自变量：可以直接控制的数据。 ​	2.因变量：不可以直接控制的数据。即需要预测和估算。 模型：​	模型本质上就是一个转换引擎，主要的作用就是找到自变量和因变量之间的关系函数。 参数：​	参数是添加到模型中用于">
 <meta property="og:type" content="article">
 <meta property="og:title" content="高等数学与经济学初步">
 <meta property="og:url" content="https://cherrymars0.github.io/Marvelous.github.io/2022/06/24/%E9%AB%98%E7%AD%89%E6%95%B0%E5%AD%A6%E4%B8%8E%E7%BB%8F%E6%B5%8E%E5%AD%A6%E5%88%9D%E6%AD%A5/index.html">
 <meta property="og:site_name" content="Marvelous">
-<meta property="og:description" content="一.线性回归与商品经济二.微积分与商品价值边际三.最值与商品价格">
+<meta property="og:description" content="一.线性回归与商品经济预测线性回归：  线性回归是在金融数据分析中很基础的机器学习算法，本文将通俗易懂的介绍线性回归的基本概念，优缺点和逻辑回归的比较。 几个重要的概念：两种数据类型：​	1.自变量：可以直接控制的数据。 ​	2.因变量：不可以直接控制的数据。即需要预测和估算。 模型：​	模型本质上就是一个转换引擎，主要的作用就是找到自变量和因变量之间的关系函数。 参数：​	参数是添加到模型中用于">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://raw.githubusercontent.com/CherryMars0/blog-img/main/%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92.png">
 <meta property="article:published_time" content="2022-06-24T05:27:26.000Z">
-<meta property="article:modified_time" content="2022-06-28T03:11:23.637Z">
+<meta property="article:modified_time" content="2022-07-04T08:35:15.746Z">
 <meta property="article:author" content="Elion Luo">
 <meta property="article:tag" content="高等数学">
 <meta property="article:tag" content="经济学">
 <meta property="article:tag" content="导数与微积分">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://raw.githubusercontent.com/CherryMars0/blog-img/main/%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92.png">
   
   
   
@@ -221,7 +223,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          32 字
+          1.2k 字
         
       </span>
     
@@ -232,7 +234,7 @@
         
         
         
-          1 分钟
+          10 分钟
         
       </span>
     
@@ -275,7 +277,34 @@
             
               <div class="markdown-body">
                 
-                <h3 id="一-线性回归与商品经济"><a href="#一-线性回归与商品经济" class="headerlink" title="一.线性回归与商品经济"></a>一.线性回归与商品经济</h3><h3 id="二-微积分与商品价值边际"><a href="#二-微积分与商品价值边际" class="headerlink" title="二.微积分与商品价值边际"></a>二.微积分与商品价值边际</h3><h3 id="三-最值与商品价格"><a href="#三-最值与商品价格" class="headerlink" title="三.最值与商品价格"></a>三.最值与商品价格</h3>
+                <h3 id="一-线性回归与商品经济预测"><a href="#一-线性回归与商品经济预测" class="headerlink" title="一.线性回归与商品经济预测"></a>一.线性回归与商品经济预测</h3><h3 id="线性回归："><a href="#线性回归：" class="headerlink" title="线性回归："></a>线性回归：</h3><img src="https://raw.githubusercontent.com/CherryMars0/blog-img/main/%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92.png" srcset="/Marvelous.github.io/img/loading.gif" lazyload />
+
+<p>线性回归是在金融数据分析中很基础的机器学习算法，本文将通俗易懂的介绍线性回归的基本概念，优缺点和逻辑回归的比较。</p>
+<h4 id="几个重要的概念："><a href="#几个重要的概念：" class="headerlink" title="几个重要的概念："></a>几个重要的概念：</h4><h5 id="两种数据类型："><a href="#两种数据类型：" class="headerlink" title="两种数据类型："></a>两种数据类型：</h5><p>​	1.自变量：可以直接控制的数据。</p>
+<p>​	2.因变量：不可以直接控制的数据。即需要预测和估算。</p>
+<h5 id="模型："><a href="#模型：" class="headerlink" title="模型："></a>模型：</h5><p>​	模型本质上就是一个转换引擎，主要的作用就是找到自变量和因变量之间的关系函数。</p>
+<h5 id="参数："><a href="#参数：" class="headerlink" title="参数："></a>参数：</h5><p>​	参数是添加到模型中用于输出预测的要素。</p>
+<h4 id="什么是线性回归："><a href="#什么是线性回归：" class="headerlink" title="什么是线性回归："></a>什么是线性回归：</h4><h5 id="什么是回归："><a href="#什么是回归：" class="headerlink" title="什么是回归："></a>什么是回归：</h5><p>回归是一种基于独立预测变量对目标值进行建模的方法。回归的目的主要是用于预测和找出变量之间的因果关系。比如预测明天的天气温度，预测股票的走势。回归之所以能预测是因为它通过历史数据，摸透了”套路”，然后通过这个套路来预测未来的结果。回归技术主要根据自变量的数量以及自变量和因变量之间的关系类型而有所不同。</p>
+<h5 id="什么是线性："><a href="#什么是线性：" class="headerlink" title="什么是线性："></a>什么是线性：</h5><p>数据点排成一条直线（或接近直线），或者沿直线延长。线性意味着，因变量和自变量之间的关系可以用直线表示。例如：</p>
+<p>​	「房子」越大，「租金」就越高</p>
+<p>​	「金子」买的越多，花的「钱」就越多</p>
+<p>​	杯子里的「水」越多，「重量」就越大</p>
+<p>线性关系不仅仅只能存在 2 个变量（二维平面）。3 个变量时（三维空间），线性关系就是一个平面，4 个变量时（四维空间），线性关系就是一个体。</p>
+<h5 id="什么是线性回归：-1"><a href="#什么是线性回归：-1" class="headerlink" title="什么是线性回归："></a>什么是线性回归：</h5><p>线性回归本来是是统计学里的概念，现在经常被用在机器学习中。</p>
+<p>线性回归是利用数理统计中回归分析，来确定两种或两种以上变量间相互依赖的定量关系的一种统计分析方法，运用十分广泛。其表达形式为y &#x3D; w’x+e，e为误差服从均值为0的正态分布。</p>
+<p>回归分析中，只包括一个自变量和一个因变量，且二者的关系可用一条直线近似表示，这种回归分析称为一元线性回归分析。如果回归分析中包括两个或两个以上的自变量，且因变量和自变量之间是线性关系，则称为多元线性回归分析。</p>
+<p>如果 2 个或者多个变量之间存在”线性关系”，那么我们就可以通过历史数据，摸清变量之间的”套路”，建立一个有效的模型，来预测未来的变量结果。</p>
+<h5 id="线性回归优特点："><a href="#线性回归优特点：" class="headerlink" title="线性回归优特点："></a>线性回归优特点：</h5><p>​	特点：速度快，可解释性好，不适合非线性。</p>
+<h5 id="线性回归优点："><a href="#线性回归优点：" class="headerlink" title="线性回归优点："></a>线性回归优点：</h5><p>​	1.建模速度快，不需要很复杂的数据，在数据量大的情况下依然运行速度很快。</p>
+<p>​	2.可以根据系数给出每个变量的解释和理解。</p>
+<h5 id="线性回归缺点："><a href="#线性回归缺点：" class="headerlink" title="线性回归缺点："></a>线性回归缺点：</h5><p>​	1.不能很好地拟合非线性数据。所以需要先判断变量之间是否是线性关系。</p>
+<h5 id="注："><a href="#注：" class="headerlink" title="注："></a>注：</h5><ol>
+<li>线性回归只能用于回归问题，逻辑回归虽然名字叫回归，但是更多用于分类问题。</li>
+<li>线性回归要求因变量是连续性数值变量，而逻辑回归要求因变量是离散的变量。</li>
+<li>线性回归要求自变量和因变量呈线性关系，而逻辑回归不要求自变量和因变量呈线性关系。</li>
+<li>线性回归可以直观的表达自变量和因变量之间的关系，逻辑回归则无法表达变量之间的关系。</li>
+</ol>
+<h3 id="二-微积分与商品边际效应"><a href="#二-微积分与商品边际效应" class="headerlink" title="二.微积分与商品边际效应"></a>二.微积分与商品边际效应</h3><h3 id="三-最值与商品定价"><a href="#三-最值与商品定价" class="headerlink" title="三.最值与商品定价"></a>三.最值与商品定价</h3>
                 
               </div>
             

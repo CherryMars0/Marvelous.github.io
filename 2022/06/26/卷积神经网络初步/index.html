@@ -24,7 +24,7 @@
 <meta property="og:description" content="CNN（Convolutional Neural Network），即卷积神经网络，是一种在图像等领域应用很广泛的一种网络模型，核心的部分包括卷积（Convolution）和池化（Pooling）。 一.环境构建：安装CUDA:CUDA为NVIDIA为N卡提供的运算平台，CUDA™是一种由NVIDIA推出的通用并行计算架构，该架构使GPU能够解决复杂的计算问题。 它包含了CUDA指令集架构（ISA">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2022-06-26T13:47:57.000Z">
-<meta property="article:modified_time" content="2022-06-28T12:55:44.743Z">
+<meta property="article:modified_time" content="2022-07-04T07:46:32.691Z">
 <meta property="article:author" content="Elion Luo">
 <meta property="article:tag" content="CNN">
 <meta property="article:tag" content="Python">
@@ -223,7 +223,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          1.6k 字
+          1.7k 字
         
       </span>
     
@@ -234,7 +234,7 @@
         
         
         
-          14 分钟
+          15 分钟
         
       </span>
     
@@ -293,7 +293,7 @@
 <p>​	删除环境： conda remove –name <env_name> –all</p>
 <p>​	在当前环境安装包： conda install <package_name>（也可直接使用pip安装）</p>
 <p>3.PyTorch</p>
-<p>​	安装地址：<a target="_blank" rel="noopener" href="https://pytorch.org/get-started/locally/">https://pytorch.org/get-started/locally/</a>	选择对应驱动和CUDA的版本后使用pip安装</p>
+<p>​	安装地址：<a target="_blank" rel="noopener" href="https://pytorch.org/get-started/locally/">https://pytorch.org/get-started/locally/</a>	选择对应驱动和CUDA的版本后使用pip安装（也可下载到本地后用 pip install 文件名 安装）</p>
 <p>​	注：CUDA版本号可在命令行中输入 NVIDIA-SMI 查看</p>
 <p>4.Keras</p>
 <p>​	Keras是基于Tensorflow的，因此需要先安装Tensorflow。</p>
@@ -305,7 +305,7 @@
 
 
 
-<h3 id="二-CNN构成："><a href="#二-CNN构成：" class="headerlink" title="二.CNN构成："></a>二.CNN构成：</h3><p>总的来说，卷积神经网络与神经网络的区别是增加了若干个卷积层，而卷积层又可细分为卷积（CONV）和池化（POOL）两部分操作。然后是全连接层（FC），可与神经网络的隐藏层相对应；最后是softmax层预测输出值。</p>
+<h3 id="二-CNN构成："><a href="#二-CNN构成：" class="headerlink" title="二.CNN构成："></a>二.CNN构成：</h3><p>总的来说，卷积神经网络与神经网络的区别是增加了若干个卷积层，而卷积层又可细分为卷积（CONV）和池化（POOL）两部分操作。然后是全连接层（FC），可与神经网络的隐藏层相对应；最后是softmax层预测输出值。用多个卷积核对图像进行卷积操作，目的是取得多幅图像中共同存有的特征。</p>
 
                 
               </div>
