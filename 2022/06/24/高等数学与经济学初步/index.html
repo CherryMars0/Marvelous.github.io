@@ -16,16 +16,17 @@
   <meta name="author" content="Elion Luo">
   <meta name="keywords" content="">
   
-    <meta name="description" content="一.线性回归与商品经济预测线性回归：  线性回归是在金融数据分析中很基础的机器学习算法，本文将通俗易懂的介绍线性回归的基本概念，优缺点和逻辑回归的比较。 几个重要的概念：两种数据类型：​	1.自变量：可以直接控制的数据。 ​	2.因变量：不可以直接控制的数据。即需要预测和估算。 模型：​	模型本质上就是一个转换引擎，主要的作用就是找到自变量和因变量之间的关系函数。 参数：​	参数是添加到模型中用于">
+    <meta name="description" content="一.线性回归与商品规划  线性回归是在金融数据分析中很基础的机器学习算法，本文将通俗易懂的介绍线性回归的基本概念，优缺点和逻辑回归的比较。 几个重要的概念：两种数据类型：​	1.自变量：可以直接控制的数据。 ​	2.因变量：不可以直接控制的数据。即需要预测和估算。 模型：​	模型本质上就是一个转换引擎，主要的作用就是找到自变量和因变量之间的关系函数。 参数：​	参数是添加到模型中用于输出预测的要素">
 <meta property="og:type" content="article">
 <meta property="og:title" content="高等数学与经济学初步">
 <meta property="og:url" content="https://cherrymars0.github.io/Marvelous.github.io/2022/06/24/%E9%AB%98%E7%AD%89%E6%95%B0%E5%AD%A6%E4%B8%8E%E7%BB%8F%E6%B5%8E%E5%AD%A6%E5%88%9D%E6%AD%A5/index.html">
 <meta property="og:site_name" content="Marvelous">
-<meta property="og:description" content="一.线性回归与商品经济预测线性回归：  线性回归是在金融数据分析中很基础的机器学习算法，本文将通俗易懂的介绍线性回归的基本概念，优缺点和逻辑回归的比较。 几个重要的概念：两种数据类型：​	1.自变量：可以直接控制的数据。 ​	2.因变量：不可以直接控制的数据。即需要预测和估算。 模型：​	模型本质上就是一个转换引擎，主要的作用就是找到自变量和因变量之间的关系函数。 参数：​	参数是添加到模型中用于">
+<meta property="og:description" content="一.线性回归与商品规划  线性回归是在金融数据分析中很基础的机器学习算法，本文将通俗易懂的介绍线性回归的基本概念，优缺点和逻辑回归的比较。 几个重要的概念：两种数据类型：​	1.自变量：可以直接控制的数据。 ​	2.因变量：不可以直接控制的数据。即需要预测和估算。 模型：​	模型本质上就是一个转换引擎，主要的作用就是找到自变量和因变量之间的关系函数。 参数：​	参数是添加到模型中用于输出预测的要素">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://raw.githubusercontent.com/CherryMars0/blog-img/main/%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/CherryMars0/blog-img/main/%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92%E2%80%94%E4%BE%8B1.png">
 <meta property="article:published_time" content="2022-06-24T05:27:26.000Z">
-<meta property="article:modified_time" content="2022-07-04T08:35:15.746Z">
+<meta property="article:modified_time" content="2022-07-05T13:19:01.601Z">
 <meta property="article:author" content="Elion Luo">
 <meta property="article:tag" content="高等数学">
 <meta property="article:tag" content="经济学">
@@ -223,7 +224,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          1.2k 字
+          4.6k 字
         
       </span>
     
@@ -234,7 +235,7 @@
         
         
         
-          10 分钟
+          39 分钟
         
       </span>
     
@@ -277,7 +278,7 @@
             
               <div class="markdown-body">
                 
-                <h3 id="一-线性回归与商品经济预测"><a href="#一-线性回归与商品经济预测" class="headerlink" title="一.线性回归与商品经济预测"></a>一.线性回归与商品经济预测</h3><h3 id="线性回归："><a href="#线性回归：" class="headerlink" title="线性回归："></a>线性回归：</h3><img src="https://raw.githubusercontent.com/CherryMars0/blog-img/main/%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92.png" srcset="/Marvelous.github.io/img/loading.gif" lazyload />
+                <h3 id="一-线性回归与商品规划"><a href="#一-线性回归与商品规划" class="headerlink" title="一.线性回归与商品规划"></a>一.线性回归与商品规划</h3><img src="https://raw.githubusercontent.com/CherryMars0/blog-img/main/%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92.png" srcset="/Marvelous.github.io/img/loading.gif" lazyload />
 
 <p>线性回归是在金融数据分析中很基础的机器学习算法，本文将通俗易懂的介绍线性回归的基本概念，优缺点和逻辑回归的比较。</p>
 <h4 id="几个重要的概念："><a href="#几个重要的概念：" class="headerlink" title="几个重要的概念："></a>几个重要的概念：</h4><h5 id="两种数据类型："><a href="#两种数据类型：" class="headerlink" title="两种数据类型："></a>两种数据类型：</h5><p>​	1.自变量：可以直接控制的数据。</p>
@@ -298,13 +299,60 @@
 <h5 id="线性回归优点："><a href="#线性回归优点：" class="headerlink" title="线性回归优点："></a>线性回归优点：</h5><p>​	1.建模速度快，不需要很复杂的数据，在数据量大的情况下依然运行速度很快。</p>
 <p>​	2.可以根据系数给出每个变量的解释和理解。</p>
 <h5 id="线性回归缺点："><a href="#线性回归缺点：" class="headerlink" title="线性回归缺点："></a>线性回归缺点：</h5><p>​	1.不能很好地拟合非线性数据。所以需要先判断变量之间是否是线性关系。</p>
-<h5 id="注："><a href="#注：" class="headerlink" title="注："></a>注：</h5><ol>
-<li>线性回归只能用于回归问题，逻辑回归虽然名字叫回归，但是更多用于分类问题。</li>
-<li>线性回归要求因变量是连续性数值变量，而逻辑回归要求因变量是离散的变量。</li>
-<li>线性回归要求自变量和因变量呈线性关系，而逻辑回归不要求自变量和因变量呈线性关系。</li>
-<li>线性回归可以直观的表达自变量和因变量之间的关系，逻辑回归则无法表达变量之间的关系。</li>
-</ol>
-<h3 id="二-微积分与商品边际效应"><a href="#二-微积分与商品边际效应" class="headerlink" title="二.微积分与商品边际效应"></a>二.微积分与商品边际效应</h3><h3 id="三-最值与商品定价"><a href="#三-最值与商品定价" class="headerlink" title="三.最值与商品定价"></a>三.最值与商品定价</h3>
+<h5 id="注："><a href="#注：" class="headerlink" title="注："></a>注：</h5><p>1.线性回归只能用于回归问题，逻辑回归虽然名字叫回归，但是更多用于分类问题。</p>
+<p>2.线性回归要求因变量是连续性数值变量，而逻辑回归要求因变量是离散的变量。</p>
+<p>3.线性回归要求自变量和因变量呈线性关系，而逻辑回归不要求自变量和因变量呈线性关系。</p>
+<p>4.线性回归可以直观的表达自变量和因变量之间的关系，逻辑回归则无法表达变量之间的关系。</p>
+<h4 id="一元线性回归应用："><a href="#一元线性回归应用：" class="headerlink" title="一元线性回归应用："></a>一元线性回归应用：</h4><p>线性回归的前提，是要有足够数据的支撑，虽有一些算法能弥补部分样本数据不够时所带来的问题。</p>
+<p>最简单的线性回归每年都会出现在高考试卷当中：</p>
+<p>例：假设有一个超市过去七天内，每天的平均温度和当天所卖出的冰激凌数量如下表，试求每天温度关于卖出冰激凌的线性回归方程。</p>
+<table>
+<thead>
+<tr>
+<th align="center">X(温度）</th>
+<th align="center">25</th>
+<th align="center">26</th>
+<th align="center">27</th>
+<th align="center">28</th>
+<th align="center">29</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">Y（卖出冰激凌数量）</td>
+<td align="center">10</td>
+<td align="center">15</td>
+<td align="center">17</td>
+<td align="center">23</td>
+<td align="center">25</td>
+</tr>
+</tbody></table>
+<p>$$<br>\bf \bar{x} &#x3D;\frac {\sum_{i&#x3D;1}^n {x_i}}{n}（线性回归方程-1）<br>$$</p>
+<p>$$<br>\bf \bar{y} &#x3D;\frac {\sum_{i&#x3D;1}^n {y_i}}{n}（线性回归方程-2）<br>$$</p>
+<p>$$<br>\bf \hat{b}&#x3D;\frac{\sum_{i&#x3D;1}^n(x_i-\bar{x})(y_i-\bar{y})}{\sum_{i&#x3D;1}^n(x_i-\bar{x})^2}&#x3D;\frac{(x_1-\bar{x})(y_1-\bar{y})+(x_2-\bar{x})(y_2-\bar{y})+(x_3-\bar{x})(y_3-\bar{y})+…}{(x_1-\bar{x})^2+(x_2-\bar{x})^2+…} （线性回归方程-3）<br>$$</p>
+<p>$$<br>\bf \bar{y} &#x3D; \hat{b}\bar{x} + \hat{a}（线性回归方程-4）<br>$$</p>
+<p>$$<br>\bf L(y|f(x)) &#x3D; \frac{1}{n} \sum_{i&#x3D;1}^n(y_i-f(x_i))^2 （线性回归方程 - 5 - MSE(均方误差损失函数)）<br>$$</p>
+<p>$$<br>\bf L(y|f(x)) &#x3D; \sqrt[2]{\frac{1}{n} \sum_{i&#x3D;1}^n(y_i-f(x_i))^2} （线性回归方程 - 6 - L2(欧氏误差函数)）<br>$$</p>
+<p>$$<br>\bf L(y|f(x)) &#x3D; \sum_{i&#x3D;1}^n|y_i-f(x_i)|（线性回归方程 - 7 - L1(曼哈顿误差函数)）<br>$$</p>
+<p>$$<br>\bf L(y|f(x)) &#x3D; \begin{cases}<br> \frac{1}{2}(y-f(x))^2 &amp; |y-f(x)| &lt; 1 \<br> |y-f(x)|-\frac{1}{2} &amp; |y-f(x)| \geq 1<br>\end{cases}（线性回归方程 - 8 - Smooth L1(Girshick损失函数)）<br>$$</p>
+<p>$$<br>\bf L(y|f(x)) &#x3D; \begin{cases}<br> \frac{1}{2}(y-f(x))^2 &amp; |y-f(x)| \leq \delta \<br> \delta|y-f(x)|-\frac{1}{2}\delta^2 &amp; |y-f(x)| &gt; \delta<br>\end{cases}（线性回归方程 - 9 - huber(huber损失函数)）<br>$$</p>
+<p>$$<br>\bf L(y|f(x)) &#x3D; \sum_{i&#x3D;1}^ny_i\times\log(\frac{y_i}{f(x_i)})（线性回归方程 - 10 - KL(散度函数)）<br>$$</p>
+<p>$$<br>\bf L(y|f(x)) &#x3D; - \sum_{i&#x3D;1}^n y_i\log(f(x_i)) （线性回归方程 - 11 - ReLU(交叉熵损失函数)）<br>$$</p>
+<p>$$<br>\bf L(y|f(x)) &#x3D; -\frac{1}{n}\sum_{i&#x3D;1}^n\log(\frac{e^{fy_i}}{\sum_{j&#x3D;1}^ce{f_j}})（线性回归方程 - 12 - softmax(CNN模型损失函数)）<br>$$</p>
+<p><code>第一步</code>：先求出X，Y的平均值：<br>$$<br>\bar{x} &#x3D;\frac {25+26+27+28+29}{5}&#x3D;27（线性回归方程-1）<br>$$</p>
+<p>$$<br>\bar{y} &#x3D;\frac {10+15+17+23+25}{5}&#x3D;18（线性回归方程-2）<br>$$</p>
+<p><code>第二步</code>：求线性回归方程的斜率：<br>$$<br>\hat{b}&#x3D;\frac{(25-27)(10-18)+(26-27)(15-18)+(27-27)(17-18)+(28-27)(23-18)+(29-27)(25-18)}{(25-27)^2+(15-27)^2+(27-27)^2+(28-27)^2+(29-27)^2} &#x3D; 3.8（线性回归方程-3）<br>$$<br><code>第三步</code>：求线性回归方程的截距：<br>$$<br>\hat{a} &#x3D; 18-3.8\times27&#x3D;-84.6（线性回归方程-4）<br>$$<br><code>第四步</code>：求线性回归方程：<br>$$<br>y &#x3D; 3.8x - 84.6（线性回归方程-4）<br>$$<br><img src="https://raw.githubusercontent.com/CherryMars0/blog-img/main/%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92%E2%80%94%E4%BE%8B1.png" srcset="/Marvelous.github.io/img/loading.gif" lazyload /></p>
+<h5 id="神经网络在线性回归中的应用："><a href="#神经网络在线性回归中的应用：" class="headerlink" title="神经网络在线性回归中的应用："></a>神经网络在线性回归中的应用：</h5><h6 id="线性回归的程序实现："><a href="#线性回归的程序实现：" class="headerlink" title="线性回归的程序实现："></a>线性回归的程序实现：</h6><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">import</span> numpy <span class="hljs-keyword">as</span> np<br><span class="hljs-keyword">import</span> matplotlib.pyplot <span class="hljs-keyword">as</span> plt<br><br>x = [<span class="hljs-number">25</span>, <span class="hljs-number">26</span>, <span class="hljs-number">27</span>, <span class="hljs-number">28</span>, <span class="hljs-number">29</span>] <span class="hljs-comment">#温度</span><br>y = [<span class="hljs-number">10</span>, <span class="hljs-number">15</span>, <span class="hljs-number">17</span>, <span class="hljs-number">23</span>, <span class="hljs-number">25</span>] <span class="hljs-comment">#卖出的数量</span><br><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">linearRegression</span>(<span class="hljs-params">x: <span class="hljs-built_in">list</span>, y: <span class="hljs-built_in">list</span></span>):<br>    <span class="hljs-keyword">def</span> <span class="hljs-title function_">Average</span>(<span class="hljs-params">x: <span class="hljs-built_in">list</span>, y: <span class="hljs-built_in">list</span></span>): <span class="hljs-comment">#求平均</span><br>        <span class="hljs-keyword">return</span> (<span class="hljs-built_in">sum</span>(x)/<span class="hljs-built_in">len</span>(x), <span class="hljs-built_in">sum</span>(y)/<span class="hljs-built_in">len</span>(y))<br>    x_bar, y_bar = Average(x, y)<br><br>    <span class="hljs-keyword">def</span> <span class="hljs-title function_">slope</span>(<span class="hljs-params">x: <span class="hljs-built_in">list</span>, y: <span class="hljs-built_in">list</span>, x_bar, y_bar</span>): <span class="hljs-comment">#求斜率</span><br>        j = <span class="hljs-number">0</span><br>        k = <span class="hljs-number">0</span><br>        <span class="hljs-keyword">for</span> x, y <span class="hljs-keyword">in</span> <span class="hljs-built_in">zip</span>(x, y):<br>            j += (x-x_bar)*(y-y_bar)<br>            k += (x-x_bar)*(x-x_bar)<br>        <span class="hljs-keyword">return</span>(j/k)<br>    b_hat = slope(x, y, x_bar, y_bar)<br><br>    <span class="hljs-keyword">def</span> <span class="hljs-title function_">intercept</span>(<span class="hljs-params">x_bar, y_bar, b_hat</span>): <span class="hljs-comment">#求截距</span><br>        <span class="hljs-keyword">return</span> (y_bar-b_hat*x_bar)<br>    a_hat = intercept(x_bar, y_bar, b_hat)<br>    <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;x_bar:&quot;</span>, x_bar, <span class="hljs-string">&quot;y_bar:&quot;</span>, y_bar)<br>    <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;a_hat:&quot;</span>, a_hat, <span class="hljs-string">&quot;b_hat:&quot;</span>, b_hat)<br><br>    <span class="hljs-keyword">def</span> <span class="hljs-title function_">showRegression</span>(<span class="hljs-params">a_hat, b_hat, x: <span class="hljs-built_in">list</span>, y: <span class="hljs-built_in">list</span></span>): <span class="hljs-comment">#画图</span><br>        plt.figure(figsize=(<span class="hljs-number">10</span>, <span class="hljs-number">10</span>), dpi=<span class="hljs-number">100</span>)<br>        X = np.linspace(<span class="hljs-built_in">max</span>(x), <span class="hljs-built_in">min</span>(x), <span class="hljs-number">1000</span>)<br>        Y = b_hat * X + a_hat<br>        plt.plot(X, Y, color=<span class="hljs-string">&#x27;red&#x27;</span>, linestyle=<span class="hljs-string">&quot;--&quot;</span>,<br>                label=(<span class="hljs-string">&quot;y=&#123;&#125;x&#123;&#125;&quot;</span>.<span class="hljs-built_in">format</span>(b_hat, a_hat)))<br>        plt.scatter(x, y, color=<span class="hljs-string">&#x27;black&#x27;</span>, label=<span class="hljs-string">&quot;real&quot;</span>)<br>        plt.legend(loc=<span class="hljs-string">&quot;best&quot;</span>)<br>        plt.show()<br>    showRegression(a_hat, b_hat, x, y)<br>    <br>linearRegression(x, y)<br><br>执行结果：<br>x_bar: <span class="hljs-number">27.0</span>   y_bar: <span class="hljs-number">18.0</span><br>a_hat: -<span class="hljs-number">84.6</span>  b_hat: <span class="hljs-number">3.8</span><br>MSEloss: <span class="hljs-number">0.72</span><br></code></pre></td></tr></table></figure>
+
+<h3 id="二-导数与商品边际效应"><a href="#二-导数与商品边际效应" class="headerlink" title="二.导数与商品边际效应"></a>二.导数与商品边际效应</h3><h4 id="几个重要概念："><a href="#几个重要概念：" class="headerlink" title="几个重要概念："></a>几个重要概念：</h4><p><code>边际利润</code>:边际利润是指每增加一单位产品所增加的利润。</p>
+<p>​	现有一单成本函数：即生产 x 单位产品需要 y 的成本，则其函数的边际利润就是其单成本函数的导数。</p>
+<p><code>边际成本</code>:边际成本是指每增加一单位产品所增加的总成本。</p>
+<p>​	现有一总成本导数：即生产 x 单位产品需要 y 的总成本，则其函数的边际成本就是其总成本函数的导数。</p>
+<p><code>边际收入</code>:边际收入指是每增加一单位产品所增加的收入额。</p>
+<p>​	现有一总收入导数：即生产 x 单位产品会产出 y 的总收入，则其函数的边际收入就是其总收入函数的导数。</p>
+<p><code>利润最大化</code>：边际收益等于边际成本时利润最大化。</p>
+<p>有了上述概念以后，我们就可以根据每个概念中的自变量和应变量收集数据然后来拟合出三种回归函数（单成本函数，总成本函数，总收入函数），进而定量的分析整个商品的走向。</p>
+<p>在第一节中，简单的介绍了线性回归和一个关于线性回归最简单的实际问题，而实际问题往往并没有那么简单，如例2：</p>
+<h3 id="三-回归函数与商品定价"><a href="#三-回归函数与商品定价" class="headerlink" title="三.回归函数与商品定价"></a>三.回归函数与商品定价</h3>
                 
               </div>
             
