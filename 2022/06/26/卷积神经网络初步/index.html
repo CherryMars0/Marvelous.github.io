@@ -26,7 +26,7 @@
 <meta property="og:image" content="https://raw.githubusercontent.com/CherryMars0/blog-img/main/%E5%9B%BE%E7%89%87%E8%A1%A8%E7%A4%BA%E6%96%B9%E6%B3%95.png">
 <meta property="og:image" content="https://raw.githubusercontent.com/CherryMars0/blog-img/main/%E5%8D%B7%E7%A7%AF%E6%A0%B8%E8%A1%A8%E7%A4%BA%E6%96%B9%E6%B3%95.png">
 <meta property="article:published_time" content="2022-06-26T13:47:57.000Z">
-<meta property="article:modified_time" content="2022-07-20T07:14:26.203Z">
+<meta property="article:modified_time" content="2022-07-21T08:58:39.644Z">
 <meta property="article:author" content="Elion Luo">
 <meta property="article:tag" content="Python">
 <meta property="article:tag" content="CNN">
@@ -226,7 +226,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          2.4k 字
+          2.5k 字
         
       </span>
     
@@ -237,7 +237,7 @@
         
         
         
-          20 分钟
+          21 分钟
         
       </span>
     
@@ -322,6 +322,7 @@
 <h5 id="映射时的两个概念："><a href="#映射时的两个概念：" class="headerlink" title="映射时的两个概念："></a>映射时的两个概念：</h5><p><code>步长</code>：卷积核每次照射图片单通道的距离，步长越长，得到的映射图越小。合适的步长能提取到图片更多的特征。步长太大，会遗漏一些特征，步长太小，得到的映射图更复杂。</p>
 <p><code>边距</code>：卷积核按位进行相乘求和时，在边界会出现位不足的情况，进而边界位置要进行补零，边距就是补零的次数，目的是为了保持输入和输出的width和height一致。</p>
 <p>因此，无论一张图片有多么复杂的通道，经过映射后只会得到一个单通道的输出，但这并不满足卷积网络抽象特征的需求，故我们可以设置多个卷积核来映射出多个不同单通道的映射图。故 [b,h,w,c] 的图片与 [n,c,w,h] (n为卷积核个数，c为图片通道，w为weight) 的卷积核进过卷积运算后会生成 n 个 [b,h,w,1] 的映射图。</p>
+<h5 id="维度："><a href="#维度：" class="headerlink" title="维度："></a>维度：</h5><p>综上，图片的各个通道经过卷积核卷积计算后得到的各个通道的映射图，此时，通道的概念已经不再适合这些映射图，我们将得到的多个映射图称为这张图片的多个维度。</p>
 
                 
               </div>
