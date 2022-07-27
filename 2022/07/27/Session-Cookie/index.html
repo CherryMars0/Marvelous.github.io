@@ -16,29 +16,23 @@
   <meta name="author" content="Elion Luo">
   <meta name="keywords" content="">
   
-    <meta name="description" content="CNN（Convolutional Neural Network），即卷积神经网络，是一种在图像等领域应用很广泛的一种网络模型，核心的部分包括卷积（Convolution）和池化（Pooling）。 一.环境构建：安装CUDA:CUDA为NVIDIA为N卡提供的运算平台，CUDA™是一种由NVIDIA推出的通用并行计算架构，该架构使GPU能够解决复杂的计算问题。 它包含了CUDA指令集架构（ISA">
+    <meta name="description" content="Session&amp;Cookie原理及其实例：1.1 Session 原理1.2 Session 实现2.1 Cookie 原理（1）浏览器端第一次发送请求到服务器端        （2）服务器端创建Cookie，该Cookie中包含用户的信息，然后将该Cookie发送到浏览器端        （3）浏览器端再次访问服务器端时会携带服务器端创建的Cookie        （4）服务器端通过C">
 <meta property="og:type" content="article">
-<meta property="og:title" content="卷积神经网络初步">
-<meta property="og:url" content="https://cherrymars0.github.io/Marvelous.github.io/2022/06/26/%E5%8D%B7%E7%A7%AF%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C%E5%88%9D%E6%AD%A5/index.html">
+<meta property="og:title" content="Session&amp;Cookie">
+<meta property="og:url" content="https://cherrymars0.github.io/Marvelous.github.io/2022/07/27/Session-Cookie/index.html">
 <meta property="og:site_name" content="Marvelous">
-<meta property="og:description" content="CNN（Convolutional Neural Network），即卷积神经网络，是一种在图像等领域应用很广泛的一种网络模型，核心的部分包括卷积（Convolution）和池化（Pooling）。 一.环境构建：安装CUDA:CUDA为NVIDIA为N卡提供的运算平台，CUDA™是一种由NVIDIA推出的通用并行计算架构，该架构使GPU能够解决复杂的计算问题。 它包含了CUDA指令集架构（ISA">
+<meta property="og:description" content="Session&amp;Cookie原理及其实例：1.1 Session 原理1.2 Session 实现2.1 Cookie 原理（1）浏览器端第一次发送请求到服务器端        （2）服务器端创建Cookie，该Cookie中包含用户的信息，然后将该Cookie发送到浏览器端        （3）浏览器端再次访问服务器端时会携带服务器端创建的Cookie        （4）服务器端通过C">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://raw.githubusercontent.com/CherryMars0/blog-img/main/%E5%9B%BE%E7%89%87%E8%A1%A8%E7%A4%BA%E6%96%B9%E6%B3%95.png">
-<meta property="og:image" content="https://raw.githubusercontent.com/CherryMars0/blog-img/main/%E5%8D%B7%E7%A7%AF%E6%A0%B8%E8%A1%A8%E7%A4%BA%E6%96%B9%E6%B3%95.png">
-<meta property="article:published_time" content="2022-06-26T13:47:57.000Z">
-<meta property="article:modified_time" content="2022-07-21T09:03:09.607Z">
+<meta property="article:published_time" content="2022-07-27T11:54:06.000Z">
+<meta property="article:modified_time" content="2022-07-27T12:10:36.141Z">
 <meta property="article:author" content="Elion Luo">
-<meta property="article:tag" content="Python">
-<meta property="article:tag" content="CNN">
-<meta property="article:tag" content="Torch">
-<meta property="article:tag" content="Keras">
-<meta property="article:tag" content="图像识别">
+<meta property="article:tag" content="Session">
+<meta property="article:tag" content="Cookie">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://raw.githubusercontent.com/CherryMars0/blog-img/main/%E5%9B%BE%E7%89%87%E8%A1%A8%E7%A4%BA%E6%96%B9%E6%B3%95.png">
   
   
   
-  <title>卷积神经网络初步 - Marvelous</title>
+  <title>Session&amp;Cookie - Marvelous</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -203,7 +197,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="卷积神经网络初步"></span>
+            <span id="subtitle" data-typed-text="Session&amp;Cookie"></span>
           
         </div>
 
@@ -214,8 +208,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2022-06-26 21:47" pubdate>
-          2022年6月26日 晚上
+        <time datetime="2022-07-27 19:54" pubdate>
+          2022年7月27日 晚上
         </time>
       </span>
     
@@ -226,7 +220,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          2.5k 字
+          222 字
         
       </span>
     
@@ -237,7 +231,7 @@
         
         
         
-          21 分钟
+          2 分钟
         
       </span>
     
@@ -275,55 +269,13 @@
         <div id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">卷积神经网络初步</h1>
+            <h1 style="display: none">Session&amp;Cookie</h1>
             
             
               <div class="markdown-body">
                 
-                <p><strong>CNN</strong>（Convolutional Neural <strong>Network</strong>），即卷积神经网络，是一种在图像等领域应用很广泛的一种网络模型，核心的部分包括卷积（Convolution）和池化（Pooling）。</p>
-<h3 id="一-环境构建："><a href="#一-环境构建：" class="headerlink" title="一.环境构建："></a>一.环境构建：</h3><h5 id="安装CUDA"><a href="#安装CUDA" class="headerlink" title="安装CUDA:"></a>安装CUDA:</h5><p>CUDA为NVIDIA为N卡提供的运算平台，CUDA™是一种由NVIDIA推出的通用<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E5%B9%B6%E8%A1%8C%E8%AE%A1%E7%AE%97/113443">并行计算</a>架构，该架构使<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/GPU">GPU</a>能够解决复杂的计算问题。 它包含了CUDA<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E6%8C%87%E4%BB%A4%E9%9B%86%E6%9E%B6%E6%9E%84">指令集架构</a>（<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/ISA">ISA</a>）以及GPU内部的并行计算引擎。 开发人员可以使用<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/C%E8%AF%AD%E8%A8%80">C语言</a>来为CUDA™架构编写程序，所编写出的程序可以在支持CUDA™的处理器上以超高性能运行。CUDA3.0已经开始支持<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/C%2B%2B">C++</a>和<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/FORTRAN">FORTRAN</a>。</p>
-<p>下载地址：<a target="_blank" rel="noopener" href="https://developer.nvidia.com/cuda-downloads?target_os=Windows&amp;target_arch=x86_64&amp;target_version=11&amp;target_type=exe_local">https://developer.nvidia.com/cuda-downloads?target_os=Windows&amp;target_arch=x86_64&amp;target_version=11&amp;target_type=exe_local</a></p>
-<h5 id="Python及组件安装："><a href="#Python及组件安装：" class="headerlink" title="Python及组件安装："></a>Python及组件安装：</h5><p>1.Python</p>
-<p>​	安装地址：<a target="_blank" rel="noopener" href="https://www.python.org/downloads/release/python-3105/">https://www.python.org/downloads/release/python-3105/</a> （安装步骤略，注意勾选PATH）</p>
-<p>2.Anaconda</p>
-<p>​	安装地址：<a target="_blank" rel="noopener" href="https://www.anaconda.com/">https://www.anaconda.com/</a></p>
-<p>​	安装好后换中国源(命令行中输入)：</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><code class="hljs shell">// 换清华源<br>conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/msys2/<br>conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/conda-forge<br>conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free/<br>conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/pytorch/<br>conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main/<br>conda config --set show_channel_urls yes<br><br>// 创建CNN环境<br><br>conda create --name CNN // 创建环境<br>conda activate CNN // 进入环境<br></code></pre></td></tr></table></figure>
-
-<p>​    创建新环境：conda create –name <env_name> <package_names></p>
-<p>​	切换环境：conda activate <env_name></p>
-<p>​	查看已有环境：conda env list</p>
-<p>​	删除环境： conda remove –name <env_name> –all</p>
-<p>​	在当前环境安装包： conda install <package_name>（也可直接使用pip安装）</p>
-<p>3.PyTorch</p>
-<p>​	安装地址：<a target="_blank" rel="noopener" href="https://pytorch.org/get-started/locally/">https://pytorch.org/get-started/locally/</a>	选择对应驱动和CUDA的版本后使用pip安装（也可下载到本地后用 pip install 文件名 安装）</p>
-<p>​	注：CUDA版本号可在命令行中输入 NVIDIA-SMI 查看</p>
-<p>4.Keras</p>
-<p>​	Keras是基于Tensorflow的，因此需要先安装Tensorflow。</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs python">pip install tensorflow<br>  	pip install keras<br></code></pre></td></tr></table></figure>
-
-<p>​	注意：如果提示缺少xxxx.dll文件，则在<a target="_blank" rel="noopener" href="https://cn.dll-files.com/">https://cn.dll-files.com/</a> 处下载后放到相应位置。</p>
-<p>5.Matplotlib</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs pyth">pip install matplotlib<br></code></pre></td></tr></table></figure>
-
-
-
-<h3 id="二-CNN原理："><a href="#二-CNN原理：" class="headerlink" title="二.CNN原理："></a>二.CNN原理：</h3><p>总的来说，卷积神经网络与神经网络的区别是增加了若干个卷积层，而卷积层又可细分为卷积（CONV）和池化（POOL）两部分操作。然后是全连接层（FC），可与神经网络的隐藏层相对应；最后是softmax层预测输出值。用多个卷积核对图像进行卷积操作，目的是取得多幅图像中共同存有的特征。</p>
-<h5 id="图片的表示方法："><a href="#图片的表示方法：" class="headerlink" title="图片的表示方法："></a>图片的表示方法：</h5><img src="https://raw.githubusercontent.com/CherryMars0/blog-img/main/%E5%9B%BE%E7%89%87%E8%A1%A8%E7%A4%BA%E6%96%B9%E6%B3%95.png" srcset="/Marvelous.github.io/img/loading.gif" lazyload />
-
-<p>因为通道有多个(一般为三个:RGB)，所以在每次映射时都会有多个卷积核对多个通道进行映射(输入图像中一个小区域中像素加权平均后成为输出图像中的每个对应像素)，但这C个卷积核都工作在同一个层面上。故有几个通道就有几个卷积核。</p>
-<h5 id="卷积核："><a href="#卷积核：" class="headerlink" title="卷积核："></a>卷积核：</h5><p>卷积核就是图像处理时，给定输入图像，输入图像中一个小区域中像素<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E5%8A%A0%E6%9D%83%E5%B9%B3%E5%9D%87/9702101">加权平均</a>后成为输出图像中的每个对应像素，其中权值由一个函数定义，这个函数称为卷积核。</p>
-<img src="https://raw.githubusercontent.com/CherryMars0/blog-img/main/%E5%8D%B7%E7%A7%AF%E6%A0%B8%E8%A1%A8%E7%A4%BA%E6%96%B9%E6%B3%95.png" srcset="/Marvelous.github.io/img/loading.gif" lazyload />
-
-
-
-<p>由图可知，卷积核的表示方法与图片的表示方法类似，但是图片为多通道，卷积核为单通道。</p>
-<h5 id="卷积运算方法："><a href="#卷积运算方法：" class="headerlink" title="卷积运算方法："></a>卷积运算方法：</h5><p>将每张图片按像素矩阵排列后，由卷积核对图片进行映射，从而得到一张映射图，每个通道各一张，n个通道即为n张，再将这n张映射图中的对应元素进行相加，最后得到一张矩阵输出。目的是为了输入的channel不管有多少个，而输出只有一个。</p>
-<h5 id="映射时的两个概念："><a href="#映射时的两个概念：" class="headerlink" title="映射时的两个概念："></a>映射时的两个概念：</h5><p><code>步长</code>：卷积核每次照射图片单通道的距离，步长越长，得到的映射图越小。合适的步长能提取到图片更多的特征。步长太大，会遗漏一些特征，步长太小，得到的映射图更复杂。</p>
-<p><code>边距</code>：卷积核按位进行相乘求和时，在边界会出现位不足的情况，进而边界位置要进行补零，边距就是补零的次数，目的是为了保持输入和输出的width和height一致。</p>
-<p>因此，无论一张图片有多么复杂的通道，经过映射后只会得到一个单通道的输出，但这并不满足卷积网络抽象特征的需求，故我们可以设置多个卷积核来映射出多个不同单通道的映射图。故 [b,h,w,c] 的图片与 [n,c,w,h] (n为卷积核个数，c为图片通道，w为weight) 的卷积核进过卷积运算后会生成 n 个 [b,h,w,1] 的映射图。</p>
-<h5 id="维度："><a href="#维度：" class="headerlink" title="维度："></a>维度：</h5><p>综上，图片的各个通道经过卷积核卷积计算后得到的各个通道的映射图，此时，通道的概念已经不再适合这些映射图，我们将得到的多个映射图称为这张图片的多个维度。</p>
-<h5 id="池化、采样和激活："><a href="#池化、采样和激活：" class="headerlink" title="池化、采样和激活："></a>池化、采样和激活：</h5>
+                <h3 id="Session-amp-Cookie原理及其实例："><a href="#Session-amp-Cookie原理及其实例：" class="headerlink" title="Session&amp;Cookie原理及其实例："></a>Session&amp;Cookie原理及其实例：</h3><h4 id="1-1-Session-原理"><a href="#1-1-Session-原理" class="headerlink" title="1.1 Session 原理"></a>1.1 Session 原理</h4><h4 id="1-2-Session-实现"><a href="#1-2-Session-实现" class="headerlink" title="1.2 Session 实现"></a>1.2 Session 实现</h4><h4 id="2-1-Cookie-原理"><a href="#2-1-Cookie-原理" class="headerlink" title="2.1 Cookie 原理"></a>2.1 Cookie 原理</h4><p>（1）浏览器端第一次发送请求到服务器端<br>        （2）服务器端创建Cookie，该Cookie中包含用户的信息，然后将该Cookie发送到浏览器端<br>        （3）浏览器端再次访问服务器端时会携带服务器端创建的Cookie<br>        （4）服务器端通过Cookie中携带的数据区分不同的用户</p>
+<h4 id="2-2-Cookie-实现"><a href="#2-2-Cookie-实现" class="headerlink" title="2.2 Cookie 实现"></a>2.2 Cookie 实现</h4><h4 id="3-Session-amp-Cookie-的区别"><a href="#3-Session-amp-Cookie-的区别" class="headerlink" title="3.Session&amp;Cookie 的区别"></a>3.Session&amp;Cookie 的区别</h4>
                 
               </div>
             
@@ -346,7 +298,7 @@
   
     <span>></span>
     
-  <a href="/Marvelous.github.io/categories/coder/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/" class="category-chain-item">人工智能</a>
+  <a href="/Marvelous.github.io/categories/coder/%E5%85%A8%E6%A0%88/" class="category-chain-item">全栈</a>
   
   
 
@@ -363,15 +315,9 @@
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/Marvelous.github.io/tags/Python/">#Python</a>
+        <a href="/Marvelous.github.io/tags/Session/">#Session</a>
       
-        <a href="/Marvelous.github.io/tags/CNN/">#CNN</a>
-      
-        <a href="/Marvelous.github.io/tags/Torch/">#Torch</a>
-      
-        <a href="/Marvelous.github.io/tags/Keras/">#Keras</a>
-      
-        <a href="/Marvelous.github.io/tags/%E5%9B%BE%E5%83%8F%E8%AF%86%E5%88%AB/">#图像识别</a>
+        <a href="/Marvelous.github.io/tags/Cookie/">#Cookie</a>
       
     </div>
   
@@ -383,8 +329,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>卷积神经网络初步</div>
-      <div>https://cherrymars0.github.io/Marvelous.github.io/2022/06/26/卷积神经网络初步/</div>
+      <div>Session&amp;Cookie</div>
+      <div>https://cherrymars0.github.io/Marvelous.github.io/2022/07/27/Session-Cookie/</div>
     </div>
     <div class="license-meta">
       
@@ -396,7 +342,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2022年6月26日</div>
+          <div>2022年7月27日</div>
         </div>
       
       
@@ -426,18 +372,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/Marvelous.github.io/2022/06/29/%E5%89%8D%E7%AB%AF%E5%A4%A7%E6%96%87%E4%BB%B6%E5%88%87%E7%89%87%E4%B8%8A%E4%BC%A0/" title="前端大文件切片上传">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">前端大文件切片上传</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/Marvelous.github.io/2022/06/24/%E9%AB%98%E7%AD%89%E6%95%B0%E5%AD%A6%E4%B8%8E%E7%BB%8F%E6%B5%8E%E5%AD%A6%E5%88%9D%E6%AD%A5/" title="高等数学与经济学初步">
-                        <span class="hidden-mobile">高等数学与经济学初步</span>
+                      <a href="/Marvelous.github.io/2022/07/25/throttle%E5%92%8Cdebounce/" title="throttle和debounce">
+                        <span class="hidden-mobile">throttle和debounce</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>

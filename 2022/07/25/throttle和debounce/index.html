@@ -16,23 +16,34 @@
   <meta name="author" content="Elion Luo">
   <meta name="keywords" content="">
   
-    <meta name="description" content="Elion Luo&#39;s blog">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Marvelous">
-<meta property="og:url" content="https://cherrymars0.github.io/Marvelous.github.io/page/2/index.html">
+    <meta name="description" content="节流（throttle）与防抖（debounce）1.节流（throttle）:使用场景：因频繁执行DOM操作，资源加载等行为，导致UI停顿甚至浏览器崩溃。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="throttle和debounce">
+<meta property="og:url" content="https://cherrymars0.github.io/Marvelous.github.io/2022/07/25/throttle%E5%92%8Cdebounce/index.html">
 <meta property="og:site_name" content="Marvelous">
-<meta property="og:description" content="Elion Luo&#39;s blog">
+<meta property="og:description" content="节流（throttle）与防抖（debounce）1.节流（throttle）:使用场景：因频繁执行DOM操作，资源加载等行为，导致UI停顿甚至浏览器崩溃。">
 <meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2022-07-25T12:36:12.000Z">
+<meta property="article:modified_time" content="2022-07-25T12:39:28.006Z">
 <meta property="article:author" content="Elion Luo">
+<meta property="article:tag" content="JavaScript">
+<meta property="article:tag" content="throttle">
+<meta property="article:tag" content="debounce">
 <meta name="twitter:card" content="summary_large_image">
   
   
   
-  <title>Marvelous</title>
+  <title>throttle和debounce - Marvelous</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
 
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
 
 
 
@@ -82,7 +93,7 @@
   <header>
     
 
-<div class="header-inner" style="height: 100vh;">
+<div class="header-inner" style="height: 70vh;">
   <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
   <div class="container">
     <a class="navbar-brand" href="/Marvelous.github.io/">
@@ -187,17 +198,53 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="a long road"></span>
+            <span id="subtitle" data-typed-text="throttle和debounce"></span>
           
         </div>
 
         
+          
+  <div class="mt-3">
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2022-07-25 20:36" pubdate>
+          2022年7月25日 晚上
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          78 字
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          1 分钟
+        
+      </span>
+    
+
+    
+    
+  </div>
+
+
+        
       </div>
 
-      
-        <div class="scroll-down-bar">
-          <i class="iconfont icon-arrowdown"></i>
-        </div>
       
     </div>
   </div>
@@ -209,47 +256,37 @@
 
   <main>
     
-      <div class="container nopadding-x-md">
-        <div id="board"
-          style="margin-top: 0">
-          
-          <div class="container">
-            <div class="row">
-              <div class="col-12 col-md-10 m-auto">
-                
-
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/Marvelous.github.io/2022/06/17/DOM-BOM%E5%92%8CES/" target="_self">
-          DOM,BOM和ES
-        </a>
-      </h1>
-
       
-      <a class="index-excerpt index-excerpt__noimg" href="/Marvelous.github.io/2022/06/17/DOM-BOM%E5%92%8CES/" target="_self">
-        <div>
-          DOM:1.什么是DOM：      1.DOM全称是：Document Object Model 也就是文档对象模型，是针对XML的基于树的API     2.描述了JavaScript处理html内容的接口，是HTML和XML的API，DOM把整个页面规划成由节点层级构成的文档     3.DOM是一种基于树的API文档，实质是API，它要求在处理过程中整个文档都表示在存储器中  2.DOM在
-        </div>
-      </a>
 
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2022-06-17 18:03" pubdate>
-              2022-06-17
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3 d-flex align-items-center">
-            <i class="iconfont icon-category"></i>
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">throttle和debounce</h1>
             
+            
+              <div class="markdown-body">
+                
+                <h2 id="节流（throttle）与防抖（debounce）"><a href="#节流（throttle）与防抖（debounce）" class="headerlink" title="节流（throttle）与防抖（debounce）"></a>节流（throttle）与防抖（debounce）</h2><h3 id="1-节流（throttle）"><a href="#1-节流（throttle）" class="headerlink" title="1.节流（throttle）:"></a>1.节流（throttle）:</h3><p><code>使用场景：</code>因频繁执行DOM操作，资源加载等行为，导致UI停顿甚至浏览器崩溃。</p>
+
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
 
 <span class="category-chains">
   
@@ -273,179 +310,156 @@
   
 </span>
 
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/Marvelous.github.io/tags/HTML/">#HTML</a>
-            
-              <a href="/Marvelous.github.io/tags/JavaScript/">#JavaScript</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/Marvelous.github.io/2022/06/17/SSM%E6%95%B4%E5%90%88Redis/" target="_self">
-          SSM整合Redis
-        </a>
-      </h1>
-
+    </div>
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
       
-      <a class="index-excerpt index-excerpt__noimg" href="/Marvelous.github.io/2022/06/17/SSM%E6%95%B4%E5%90%88Redis/" target="_self">
-        <div>
-          1.导入Maven坐标依赖1234567891011&lt;!-- redis--&gt;&lt;dependency&gt;&lt;groupId&gt;redis.clients&lt;&#x2F;groupId&gt;&lt;artifactId&gt;jedis&lt;&#x2F;artifactId&gt;&lt;version&gt;2.4.2&lt;&#x2F;version&gt;&lt;&#x2F;dependency
-        </div>
-      </a>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2022-06-17 15:00" pubdate>
-              2022-06-17
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3 d-flex align-items-center">
-            <i class="iconfont icon-category"></i>
-            
-
-<span class="category-chains">
-  
-  
-    
-      <span class="category-chain">
-        
-  <a href="/Marvelous.github.io/categories/coder/" class="category-chain-item">coder</a>
-  
-  
-    <span>></span>
-    
-  <a href="/Marvelous.github.io/categories/coder/%E5%90%8E%E7%AB%AF/" class="category-chain-item">后端</a>
-  
-  
-
-  
-
-      </span>
-    
-  
-</span>
-
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/Marvelous.github.io/tags/Redis/">#Redis</a>
-            
-              <a href="/Marvelous.github.io/tags/Java/">#Java</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/Marvelous.github.io/2022/06/17/CentOS%E5%AE%89%E8%A3%85Redis/" target="_self">
-          CentOS安装Redis
-        </a>
-      </h1>
-
+        <a href="/Marvelous.github.io/tags/JavaScript/">#JavaScript</a>
       
-      <a class="index-excerpt index-excerpt__noimg" href="/Marvelous.github.io/2022/06/17/CentOS%E5%AE%89%E8%A3%85Redis/" target="_self">
-        <div>
-          1.下载：12https:&#x2F;&#x2F;redis.io&#x2F;wget http:&#x2F;&#x2F;download.redis.io&#x2F;releases&#x2F;redis-5.0.7.tar.gz  2.解压：1tar -xzvf redis-5.0.7.tar.gz   3.编译：12345yum install gccyum install tclcd redis-5.0.7&#x2F;make MALLOC&#x3D;libc  4.测试编译：
+        <a href="/Marvelous.github.io/tags/throttle/">#throttle</a>
+      
+        <a href="/Marvelous.github.io/tags/debounce/">#debounce</a>
+      
+    </div>
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>throttle和debounce</div>
+      <div>https://cherrymars0.github.io/Marvelous.github.io/2022/07/25/throttle和debounce/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>Elion Luo</div>
         </div>
-      </a>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2022-06-17 14:59" pubdate>
-              2022-06-17
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3 d-flex align-items-center">
-            <i class="iconfont icon-category"></i>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2022年7月25日</div>
+        </div>
+      
+      
+      <div class="license-meta-item">
+        <div>许可协议</div>
+        <div>
+          
             
-
-<span class="category-chains">
-  
-  
-    
-      <span class="category-chain">
-        
-  <a href="/Marvelous.github.io/categories/coder/" class="category-chain-item">coder</a>
-  
-  
-    <span>></span>
-    
-  <a href="/Marvelous.github.io/categories/coder/%E5%90%8E%E7%AB%AF/" class="category-chain-item">后端</a>
-  
-  
-
-  
-
-      </span>
-    
-  
-</span>
-
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
             
-              <a href="/Marvelous.github.io/tags/Linux/">#Linux</a>
+              <a target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+              <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                <i class="iconfont icon-by"></i>
+              </span>
+              </a>
             
-              <a href="/Marvelous.github.io/tags/CentOS/">#CentOS</a>
-            
-              <a href="/Marvelous.github.io/tags/Redis/">#Redis</a>
-            
-          </div>
-        
+          
+        </div>
       </div>
-    </article>
+    </div>
+    <div class="license-icon iconfont"></div>
   </div>
 
 
 
-  <nav aria-label="navigation">
-    <span class="pagination" id="pagination">
-      <a class="extend prev" rel="prev" href="/Marvelous.github.io/"><i class="iconfont icon-arrowleft"></i></a><a class="page-number" href="/Marvelous.github.io/">1</a><span class="page-number current">2</span>
-    </span>
-  </nav>
-
-
-
-              </div>
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/Marvelous.github.io/2022/07/27/Session-Cookie/" title="Session&amp;Cookie">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">Session&amp;Cookie</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/Marvelous.github.io/2022/07/13/Python%E7%B1%BB%E6%9C%BA%E5%88%B6/" title="Python类机制">
+                        <span class="hidden-mobile">Python类机制</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
             </div>
-          </div>
+
+            
+          </article>
         </div>
       </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+  
+  
+
+
+
+
+
+  <script>
+  Fluid.utils.createScript('https://lib.baomitu.com/mermaid/8.14.0/mermaid.min.js', function() {
+    mermaid.initialize({});
+  });
+</script>
+
+
+
+
+
+
     
 
     
@@ -539,6 +553,106 @@
 
 
 
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.18.2/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      headingSelector : CONFIG.toc.headingSelector || 'h1,h2,h3,h4,h5,h6',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      collapseDepth   : CONFIG.toc.collapseDepth || 0,
+      scrollSmooth    : true,
+      headingsOffset  : -boardTop
+    });
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.10/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/4.3.1/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  
+      <script>
+        if (!window.MathJax) {
+          window.MathJax = {
+            tex    : {
+              inlineMath: { '[+]': [['$', '$']] }
+            },
+            loader : {
+              load: ['ui/lazy']
+            },
+            options: {
+              renderActions: {
+                insertedScript: [200, () => {
+                  document.querySelectorAll('mjx-container').forEach(node => {
+                    let target = node.parentNode;
+                    if (target.nodeName.toLowerCase() === 'li') {
+                      target.parentNode.classList.add('has-jax');
+                    }
+                  });
+                }, '', false]
+              }
+            }
+          };
+        } else {
+          MathJax.startup.document.state(0);
+          MathJax.texReset();
+          MathJax.typeset();
+          MathJax.typesetPromise();
+        }
+      </script>
+    
+
+  <script  src="https://lib.baomitu.com/mathjax/3.2.1/es5/tex-mml-chtml.js" ></script>
 
   <script  src="/Marvelous.github.io/js/local-search.js" ></script>
 
