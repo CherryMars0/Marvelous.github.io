@@ -16,24 +16,22 @@
   <meta name="author" content="Elion Luo">
   <meta name="keywords" content="">
   
-    <meta name="description" content="1. 前言现如今web产业发展正值高峰，各种框架库和新概念层出不穷，使得我们在开发过程中对技术结构和代码框架的更新迭代而应接不暇，在自由开发过程中有时还会产生对技术本身的迷茫。但是web的根本还是在服务业上，web不过是将服务业延伸到了互联网的层面。故吾开发时不能一味追求技术的提升，而脱离服务业需求的基石。技术应该服务于开发者，而开发者不应该受技术进步的拖累。技术的进步是一把双刃剑，良性的技术进步">
+    <meta name="description" content="Git基本操作：1234567891011121314151617181920#用户基本信息设置：git config --global user.name &quot;姓名&quot;git config --global user.email &quot;邮箱&quot;#生成SSH：ssh-keygen -t rsa -C &quot;邮箱&quot; # SSH文件存放在C:&#x2F;User&#x2F;用">
 <meta property="og:type" content="article">
-<meta property="og:title" content="web开发环境总成">
-<meta property="og:url" content="https://cherrymars0.github.io/Marvelous.github.io/2022/07/27/web%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E6%80%BB%E6%88%90/index.html">
+<meta property="og:title" content="Git基本操作">
+<meta property="og:url" content="https://cherrymars0.github.io/Marvelous.github.io/2022/07/29/Git%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/index.html">
 <meta property="og:site_name" content="Marvelous">
-<meta property="og:description" content="1. 前言现如今web产业发展正值高峰，各种框架库和新概念层出不穷，使得我们在开发过程中对技术结构和代码框架的更新迭代而应接不暇，在自由开发过程中有时还会产生对技术本身的迷茫。但是web的根本还是在服务业上，web不过是将服务业延伸到了互联网的层面。故吾开发时不能一味追求技术的提升，而脱离服务业需求的基石。技术应该服务于开发者，而开发者不应该受技术进步的拖累。技术的进步是一把双刃剑，良性的技术进步">
+<meta property="og:description" content="Git基本操作：1234567891011121314151617181920#用户基本信息设置：git config --global user.name &quot;姓名&quot;git config --global user.email &quot;邮箱&quot;#生成SSH：ssh-keygen -t rsa -C &quot;邮箱&quot; # SSH文件存放在C:&#x2F;User&#x2F;用">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://raw.githubusercontent.com/CherryMars0/blog-img/main/web%E6%8A%80%E6%9C%AF%E6%9E%B6%E6%9E%84.png">
-<meta property="article:published_time" content="2022-07-27T12:18:22.000Z">
-<meta property="article:modified_time" content="2022-07-29T10:25:23.694Z">
+<meta property="article:published_time" content="2022-07-29T12:11:24.000Z">
+<meta property="article:modified_time" content="2022-07-29T12:21:07.452Z">
 <meta property="article:author" content="Elion Luo">
-<meta property="article:tag" content="DevelopmentEnvirment">
+<meta property="article:tag" content="Git">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://raw.githubusercontent.com/CherryMars0/blog-img/main/web%E6%8A%80%E6%9C%AF%E6%9E%B6%E6%9E%84.png">
   
   
   
-  <title>web开发环境总成 - Marvelous</title>
+  <title>Git基本操作 - Marvelous</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -198,7 +196,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="web开发环境总成"></span>
+            <span id="subtitle" data-typed-text="Git基本操作"></span>
           
         </div>
 
@@ -209,8 +207,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2022-07-27 20:18" pubdate>
-          2022年7月27日 晚上
+        <time datetime="2022-07-29 20:11" pubdate>
+          2022年7月29日 晚上
         </time>
       </span>
     
@@ -221,7 +219,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          1.9k 字
+          448 字
         
       </span>
     
@@ -232,7 +230,7 @@
         
         
         
-          17 分钟
+          4 分钟
         
       </span>
     
@@ -270,44 +268,12 @@
         <div id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">web开发环境总成</h1>
+            <h1 style="display: none">Git基本操作</h1>
             
             
               <div class="markdown-body">
                 
-                <h3 id="1-前言"><a href="#1-前言" class="headerlink" title="1. 前言"></a>1. 前言</h3><p>现如今web产业发展正值高峰，各种框架库和新概念层出不穷，使得我们在开发过程中对技术结构和代码框架的更新迭代而应接不暇，在自由开发过程中有时还会产生对技术本身的迷茫。但是web的根本还是在服务业上，web不过是将服务业延伸到了互联网的层面。故吾开发时不能一味追求技术的提升，而脱离服务业需求的基石。技术应该服务于开发者，而开发者不应该受技术进步的拖累。技术的进步是一把双刃剑，良性的技术进步会推动人类文明的发展。而只为选拔人才和淘汰人才而产生的技术进步只会平白浪费社会生产力，增加不必要的内耗，污染整个生产体系，阻碍人类精神文明的进步。</p>
-<p>为了面对日益复杂的开发环境，我将在web开发中遇到的各种开发模式和技术架构做一个总结，以便我在今后的工作和学习生活中参考。</p>
-<h3 id="2-web开发技术栈"><a href="#2-web开发技术栈" class="headerlink" title="2. web开发技术栈"></a>2. web开发技术栈</h3><p>web开发基于B&#x2F;S(浏览器&#x2F;服务器)模式，针对浏览器页面的开发属于前端开发，针对服务器程的开发属于后端开发。根据前端开发和后端开发的复杂度以及具体业务的需求，可以将web开发技术栈总结为以下四种：</p>
-<h4 id="2-1-小前端-amp-小后端："><a href="#2-1-小前端-amp-小后端：" class="headerlink" title="2.1 小前端&amp;小后端："></a>2.1 小前端&amp;小后端：</h4><p>这是web开发目前最常用的一种前后端分离的开发模式，前端负责整个网页的功能，后端负责数据的调度和运算，适合用于中小型的后期会持续开发且前后端逻辑都较为复杂的项目。</p>
-<p><code>小前端所使用的技术</code>:HTML，CSS，JS(原生JS,Vue,React,Angular)，chart.js，mathJax.js</p>
-<p><code>小后端所使用的技术</code>:JAVA（servlet，Spring族，MyBatis族，Tomcat），golang，django，Python，C++&#x2F;C + nginx</p>
-<hr>
-<h4 id="2-2-大前端："><a href="#2-2-大前端：" class="headerlink" title="2.2 大前端："></a>2.2 大前端：</h4><p>大前端中将不存在前端与后端的概念区分，负责前端功能的代码与负责后端功能的代码耦合在一起,并且大前端专注于前端页面功能的实现，而后端逻辑相对简单。适合于微小型后端交互逻辑简单，前端功能复杂的项目。</p>
-<p><code>大前端所使用的技术</code>:HTML，CSS(各种UI库)，JS(Vue,React,Angular)，chart.js，mathJax.js，konva.js，three.js + Node.js(原生JS,express)，Nginx，Apache</p>
-<p><code>跨平台</code>：Cordova&#x2F;phoneGap，ReactNative，Weex，微信小程序，PWA，Flutter，Picasso，快应用</p>
-<hr>
-<h4 id="2-3-大后端："><a href="#2-3-大后端：" class="headerlink" title="2.3 大后端："></a>2.3 大后端：</h4><p>大后端与大前端同样不存在前端与后端的概念区分，而相较于大前端不同的是，大后端专注于后端复杂逻辑的实现，而前端页面较于简易。适合于微小型后端交互复杂，前端功能简易的项目。</p>
-<p><code>大后端所使用的技术</code>:PHP，ASP(.NET)，JSP(JAVA) + Tomcat，Apache</p>
-<hr>
-<h4 id="2-4-大前端-amp-大后端："><a href="#2-4-大前端-amp-大后端：" class="headerlink" title="2.4 大前端&amp;大后端："></a>2.4 大前端&amp;大后端：</h4><p>这是web网络的终极实现方式，同样是前后端分离的模式，而前端不再局限与页面功能的实现，而是负责整个前端页面的渲染和呈现，后端也不再仅仅负责前端对后端复杂逻辑数据的需求，还要兼顾高并发，快速缓存，多线程，分布式等更高层次的要求。适合大型和超大型的结构功能丰富，有大流量访问需求的项目。</p>
-<p><code>大前端所使用的技术</code>：</p>
-<p>​	<code>页面功能</code>：HTML，CSS(各种UI库)，JS(JQuery,Vue,React,Angular …)，chart.js，mathJax.js，konva.js，three.js</p>
-<p>​	<code>页面渲染</code>：Nuxt，Templete(Templete.js,Wukong.js,Handlebars.js …)，Node.js(express)</p>
-<p>​	<code>页面多线程</code>：Web-Worker</p>
-<p>​			……</p>
-<p><code>大后端所使用的技术</code>：</p>
-<p>​	<code>前端需求</code>：JAVA（Spring族，MyBatis族，Tomcat，nginx，Apache），golang，django，C++&#x2F;C</p>
-<p>​	<code>负载均衡</code>: Nginx，Tomcat，Apache</p>
-<p>​	<code>多线程</code>：开发语言（JAVA,GO,C&#x2F;C++,django）多线程优化</p>
-<p>​	<code>高并发</code>：负载均衡优化，CDN，快速缓存，数据库优化，多线程，Tomcat优化</p>
-<p>​	<code>分布式</code>：XML，负载均衡，Tomcat集群，k8s+Docker集群</p>
-<p>​	<code>快速缓存</code>：服务器端缓存（Redis），代理服务器端缓存，客户端缓存</p>
-<p>​	<code>监控</code>：Zabbix，Prometheus</p>
-<p>​	<code>容器</code>：Docker，kubernetes</p>
-<p>​			……</p>
-<hr>
-<p>以上大概总结了4钟技术栈，以及这四种技术栈适合的开发场景，这四种技术栈涵盖了所有的开发模式。根据技术对事不对人的原则，任何开发者都应该泛化，不能以任何技术栈来具体开发者，只有狭义的项目存在技术栈之分，进而使得我们可以根据开发者要开发的项目的规模，来确定相应的技术栈，以减少开发周期和开发难度。</p>
-<h3 id="3-web开发架构"><a href="#3-web开发架构" class="headerlink" title="3. web开发架构"></a>3. web开发架构</h3><img src="https://raw.githubusercontent.com/CherryMars0/blog-img/main/web%E6%8A%80%E6%9C%AF%E6%9E%B6%E6%9E%84.png" srcset="/Marvelous.github.io/img/loading.gif" lazyload />
+                <h4 id="Git基本操作："><a href="#Git基本操作：" class="headerlink" title="Git基本操作："></a>Git基本操作：</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><code class="hljs shell"><span class="hljs-meta prompt_">#</span><span class="language-bash">用户基本信息设置：</span><br>git config --global user.name &quot;姓名&quot;<br>git config --global user.email &quot;邮箱&quot;<br><span class="hljs-meta prompt_"></span><br><span class="hljs-meta prompt_">#</span><span class="language-bash">生成SSH：</span><br>ssh-keygen -t rsa -C &quot;邮箱&quot; # SSH文件存放在C:/User/用户/.ssh下，id_rsa为私钥，id_rsa.pub为公钥。<br><span class="hljs-meta prompt_"></span><br><span class="hljs-meta prompt_">#</span><span class="language-bash">测试SSH连接：</span><br>ssh -T git@github.com<br><br>git init  #初始化仓库<br>git clone &#123;网址&#125; #克隆仓库<br><br>git add . # 添加当前文件夹内容至待提交区<br><br>git commit -m &quot;注释&quot; # 将待提交的文件提交<br><br>git pull -u &#123;仓库网址&#125; &#123;当前分支&#125; # 将提交的文件添加到上传区<br><br>git push -u &#123;仓库网址&#125; &#123;当前分支&#125; # 将待上传的文件上传<br></code></pre></td></tr></table></figure>
 
 
                 
@@ -330,13 +296,6 @@
   <a href="/Marvelous.github.io/categories/coder/" class="category-chain-item">coder</a>
   
   
-    <span>></span>
-    
-  <a href="/Marvelous.github.io/categories/coder/%E5%89%8D%E7%AB%AF/" class="category-chain-item">前端</a>
-  
-  
-
-  
 
       </span>
     
@@ -349,7 +308,7 @@
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/Marvelous.github.io/tags/DevelopmentEnvirment/">#DevelopmentEnvirment</a>
+        <a href="/Marvelous.github.io/tags/Git/">#Git</a>
       
     </div>
   
@@ -361,8 +320,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>web开发环境总成</div>
-      <div>https://cherrymars0.github.io/Marvelous.github.io/2022/07/27/web开发环境总成/</div>
+      <div>Git基本操作</div>
+      <div>https://cherrymars0.github.io/Marvelous.github.io/2022/07/29/Git基本操作/</div>
     </div>
     <div class="license-meta">
       
@@ -374,7 +333,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2022年7月27日</div>
+          <div>2022年7月29日</div>
         </div>
       
       
@@ -404,18 +363,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/Marvelous.github.io/2022/07/29/Git%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/" title="Git基本操作">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">Git基本操作</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/Marvelous.github.io/2022/07/27/Session-Cookie/" title="Session&amp;Cookie">
-                        <span class="hidden-mobile">Session&amp;Cookie</span>
+                      <a href="/Marvelous.github.io/2022/07/27/web%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E6%80%BB%E6%88%90/" title="web开发环境总成">
+                        <span class="hidden-mobile">web开发环境总成</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
